@@ -14,6 +14,9 @@ own dataset, you can start at Step 2-3 to train our models on your dataset.
 ## Model checkpoints not provided
 We do not provide checkpoints because the models are trained on a licensed dataset.
 
+## Docker
+The code is tested on a docker image built from the docker file included. It contains all package requirements.
+
 ## Step 1: Get the data
 We use [Trinity Speech-Gesture Dataset](https://trinityspeechgesture.scss.tcd.ie/) (part I). 
 The usage of the dataset must be licensed through their official website.
