@@ -1,0 +1,13 @@
+*.wav
+*.npy
+*.csv
+*.pkl
+*.sh
+*.pyc
+*.sav
+data/bvh
+data/filelists
+data/wav
+output
+synth
+models

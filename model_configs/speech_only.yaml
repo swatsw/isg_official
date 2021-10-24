@@ -1,0 +1,20 @@
+---
+shared_hparams:
+  features: False
+  training_files: "data/filelists/genea_train.txt"
+  validation_files: "data/filelists/genea_dev.txt"
+  wav_directory: "data/wav"
+  gesture_dir: "data/bvh"
+
+train_hparams:
+  fp16_run: False
+  distributed_run: False
+#  n_gpus: 1
+  batch_size: 20
+  tt2_checkpoint: "models/tacotron2_statedict.pt"
+
+test_hparams:
+  distributed_run: False
+  batch_size: 1
+  return_audio_path: True
+  shuffle_dataloader: False

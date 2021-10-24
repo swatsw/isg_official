@@ -1,0 +1,44 @@
+---
+shared_hparams:
+  speakers: False
+
+  gesture_out: True
+  gesture_dim: 45
+  gesture_dir: 'data/bvh'
+  gesture_to_prenet: False
+
+  gesture_lstm: True
+  gesture_use_postnet: False
+  gesture_lstm_use_prenet: False
+  gesture_use_scheduled_sampling: True
+  gesture_scheduled_sampling_epochs:
+    - 5
+    - 40
+  gesture_scheduled_sampling_min: 0.2
+  gesture_lstm_subsample: 4
+  gesture_lstm_l: 4
+  geture_lstm_dim_dim: 512
+
+  freeze_tt2: True
+
+  SG_gan: True
+  lstm_d_l: 2
+  lstm_d_use_both_hc: False
+  SG_gan_loss_w: 0.05
+  separate_d_optimizer: False
+
+  training_files: "data/filelists/genea_train.txt"
+  validation_files: "data/filelists/genea_dev.txt"
+  wav_directory: "data/wav"
+
+train_hparams:
+  batch_size: 30
+  distributed_run: False
+  fp16_run: False
+  tt2_checkpoint: "models/tacotron2_statedict.pt"
+
+test_hparams:
+  batch_size: 1
+  distributed_run: False
+  return_audio_path: True
+  shuffle_dataloader: False

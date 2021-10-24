@@ -1,0 +1,11 @@
+---
+num_samples: -1
+iter: "latest"
+
+synth_outdir: "synth"
+waveglow_path: "models/waveglow_256channels_universal_v5.pt"
+
+hparams: # model hparams for all models tested
+  seed: 1234
+  max_decoder_steps: 1200
+  distributed_run: False
